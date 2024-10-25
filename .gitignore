@@ -38,6 +38,7 @@ node_modules
 venv/
 .env
 .set_env.sh
+env-secret.yaml
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

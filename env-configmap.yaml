@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+data:
+  AWS_BUCKET: "arn:aws:s3:::udacity-s3-dev"
+  AWS_REGION: "us-east-1"
+  AWS_PROFILE: "arn:aws:iam::136675662537:user/loclt7-udacity-course4"
+
