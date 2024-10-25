@@ -5,7 +5,7 @@ metadata:
   labels:
     app: backend-feed
 spec:
-  replicas: 3  # Adjust the number of replicas as needed
+  replicas: 2  # Adjust the number of replicas as needed
   selector:
     matchLabels:
       app: backend-feed
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: letienlocvn/udagram-api-user:latest
+        image: letienlocvn/udagram-api-feed:latest
         ports:
         - containerPort: 8080  # Adjust the port if necessary
         env:
