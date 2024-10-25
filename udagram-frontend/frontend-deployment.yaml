@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: <your_dockerhub_username>/udagram-frontend:<tag>  # Replace with your Docker image
+        image: letienlocvn/udagram-frontend:latest # Replace with your Docker image
         ports:
         - containerPort: 8080  # Adjust the port if necessary
         env:
