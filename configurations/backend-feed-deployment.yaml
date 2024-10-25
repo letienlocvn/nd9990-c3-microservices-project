@@ -35,15 +35,15 @@ spec:
         - name: AWS_BUCKET
           valueFrom:
             configMapKeyRef:
-              name: env-configmap
+              name: my-config
               key: AWS_BUCKET
         - name: AWS_REGION
           valueFrom:
             configMapKeyRef:
-              name: env-configmap
+              name: my-config
               key: AWS_REGION
         - name: AWS_PROFILE
           valueFrom:
             configMapKeyRef:
-              name: env-configmap
+              name: my-config
               key: AWS_PROFILE

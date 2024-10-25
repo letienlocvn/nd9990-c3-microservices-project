@@ -5,7 +5,7 @@ metadata:
   labels:
     app: backend-user
 spec:
-  replicas: 3  # Adjust the number of replicas as needed
+  replicas: 2  # Adjust the number of replicas as needed
   selector:
     matchLabels:
       app: backend-user
@@ -35,15 +35,15 @@ spec:
         - name: AWS_BUCKET
           valueFrom:
             configMapKeyRef:
-              name: env-configmap
+              name: my-config
               key: AWS_BUCKET
         - name: AWS_REGION
           valueFrom:
             configMapKeyRef:
-              name: env-configmap
+              name: my-config
               key: AWS_REGION
         - name: AWS_PROFILE
           valueFrom:
             configMapKeyRef:
-              name: env-configmap
+              name: my-config
               key: AWS_PROFILE

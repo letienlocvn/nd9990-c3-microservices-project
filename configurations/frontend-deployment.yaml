@@ -5,7 +5,7 @@ metadata:
   labels:
     app: frontend
 spec:
-  replicas: 3  # Adjust the number of replicas as needed
+  replicas: 2  # Adjust the number of replicas as needed
   selector:
     matchLabels:
       app: frontend
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: letienlocvn/udagram-frontend:local # Replace with your Docker image
+        image: letienlocvn/udagram-frontend:latest # Replace with your Docker image
         ports:
         - containerPort: 8080  # Adjust the port if necessary
         env:
