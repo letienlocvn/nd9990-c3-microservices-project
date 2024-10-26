@@ -12,7 +12,7 @@ export const sequelize = new Sequelize({
   'storage': ':memory:',
   dialectOptions: {
     ssl: {
-      require: false,
+      require: true,
       rejectUnauthorized: false, // added for compatibility with RDS
     },
   },
