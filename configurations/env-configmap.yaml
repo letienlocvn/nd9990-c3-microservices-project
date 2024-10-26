@@ -6,4 +6,4 @@ data:
   AWS_BUCKET: "arn:aws:s3:::udacity-s3-dev"
   AWS_REGION: "us-east-1"
   AWS_PROFILE: "arn:aws:iam::136675662537:user/loclt7-udacity-course4"
-
+  POSTGRES_HOST: "database-udacity.cmc1sxlcey3u.us-east-1.rds.amazonaws.com"

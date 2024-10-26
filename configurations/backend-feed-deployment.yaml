@@ -20,18 +20,21 @@ spec:
         ports:
         - containerPort: 8080  # Adjust the port if necessary
         env:
-        - name: POSTGRES_USER
+        - name: POSTGRES_USERNAME
           valueFrom:
             secretKeyRef:
               name: env-secret
-              key: POSTGRES_USER
+              key: POSTGRES_USERNAME
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
               name: env-secret
               key: POSTGRES_PASSWORD
-        - name: DATABASE_URL
-          value: "postgres://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@database-udacity.cmc1sxlcey3u.us-east-1.rds.amazonaws.com:5432/postgres"
+        - name: POSTGRES_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: my-config
+              key: POSTGRES_HOST
         - name: AWS_BUCKET
           valueFrom:
             configMapKeyRef:
